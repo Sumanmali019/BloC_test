@@ -74,26 +74,31 @@ class CustomWidget extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 8),
-                      Row(
-                        children: [
-                          Row(
-                            children: [
-                              const Text(
-                                'Description: ',
-                                style: TextStyle(
-                                  fontSize: 14,
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                const Text(
+                                  'Description: ',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                description,
-                                style: const TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
+                                Text(
+                                  description,
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                       const SizedBox(height: 8),
                       Row(
@@ -125,25 +130,28 @@ class CustomWidget extends StatelessWidget {
                           httpsIcon,
                         ],
                       ),
-                      InkWell(
-                        onTap: () {
-                          _launchURL(link);
-                        },
-                        child: Row(
-                          children: [
-                            const Icon(Icons.link),
-                            const SizedBox(
-                              width: 4,
-                            ),
-                            Text(
-                              '$link',
-                              style: const TextStyle(
-                                fontSize: 16,
-                                decoration: TextDecoration.underline,
-                                color: Colors.blue,
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: InkWell(
+                          onTap: () {
+                            _launchURL(link);
+                          },
+                          child: Row(
+                            children: [
+                              const Icon(Icons.link),
+                              const SizedBox(
+                                width: 4,
                               ),
-                            ),
-                          ],
+                              Text(
+                                '$link',
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  decoration: TextDecoration.underline,
+                                  color: Colors.blue,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       const SizedBox(height: 8),
