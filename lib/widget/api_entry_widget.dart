@@ -43,7 +43,7 @@ class CustomWidget extends StatelessWidget {
               final category = entry['Category'] ?? 'No Auth Data';
               final title = entry['API'] ?? 'No API Data';
               final description = entry['Description'] ?? 'No Description Data';
-              final link = entry['Link'] ?? 'No Description Data';
+              final link = entry['Link'] ?? 'No link Data';
 
               return Card(
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
