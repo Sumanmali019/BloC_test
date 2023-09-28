@@ -17,22 +17,22 @@ class ApiResponse with _$ApiResponse {
 
 @JsonSerializable()
 class ApiEntry {
-  String? API;
-  String? Description;
-  String? Auth;
-  bool? HTTPS;
-  String? Cors;
-  String? Link;
-  String? Category;
+  String? api;
+  String? description;
+  String? auth;
+  bool? hTTPS;
+  String? cors;
+  String? link;
+  String? category;
 
   ApiEntry({
-     this.API,
-     this.Description,
-     this.Auth,
-     this.HTTPS,
-     this.Cors,
-     this.Link,
-     this.Category,
+     this.api,
+     this.description,
+     this.auth,
+     this.hTTPS,
+     this.cors,
+     this.link,
+     this.category,
   });
 
   factory ApiEntry.fromJson(Map<String, dynamic> json) =>

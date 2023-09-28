@@ -8,23 +8,23 @@ part of 'api_response.dart';
 
 
 ApiEntry _$ApiEntryFromJson(Map<String, dynamic> json) => ApiEntry(
-      API: json['API'] as String?,
-      Description: json['Description'] as String?,
-      Auth: json['Auth'] as String?,
-      HTTPS: json['HTTPS'] as bool?,
-      Cors: json['Cors'] as String?,
-      Link: json['Link'] as String?,
-      Category: json['Category'] as String?,
+      api: json['API'] as String?,
+      description: json['Description'] as String?,
+      auth: json['Auth'] as String?,
+      hTTPS: json['HTTPS'] as bool?,
+      cors: json['Cors'] as String?,
+      link: json['Link'] as String?,
+      category: json['Category'] as String?,
     );
 
 Map<String, dynamic> _$ApiEntryToJson(ApiEntry instance) => <String, dynamic>{
-      'API': instance.API,
-      'Description': instance.Description,
-      'Auth': instance.Auth,
-      'HTTPS': instance.HTTPS,
-      'Cors': instance.Cors,
-      'Link': instance.Link,
-      'Category': instance.Category,
+      'API': instance.api,
+      'Description': instance.description,
+      'Auth': instance.auth,
+      'HTTPS': instance.hTTPS,
+      'Cors': instance.cors,
+      'Link': instance.link,
+      'Category': instance.category,
     };
 
 _$ApiResponseImpl _$$ApiResponseImplFromJson(Map<String, dynamic> json) =>
