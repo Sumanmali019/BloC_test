@@ -35,12 +35,16 @@ class MyHomePage extends StatelessWidget {
       ),
       body: BlocProvider(
         create: (context) => ApiBloc()..fetchData(),
-        child: const Column(
+        child: Column(
           children: [
             Expanded(
               child: Align(
                 alignment: Alignment.topCenter,
-                child: CustomWidget(),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height,
+                  width: 900,
+                  child: const CustomWidget(),
+                ),
               ),
             ),
           ],
