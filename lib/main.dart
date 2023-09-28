@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Assigment',
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey
-        ,
+        primarySwatch: Colors.blueGrey,
       ),
       home: const MyHomePage(),
     );
@@ -36,16 +35,12 @@ class MyHomePage extends StatelessWidget {
       ),
       body: BlocProvider(
         create: (context) => ApiBloc()..fetchData(),
-        child: Column(
+        child: const Column(
           children: [
             Expanded(
               child: Align(
                 alignment: Alignment.topCenter,
-                child: SizedBox(
-                  height: MediaQuery.of(context).size.height,
-                  width: 900,
-                  child: const CustomWidget(),
-                ),
+                child: CustomWidget(),
               ),
             ),
           ],
