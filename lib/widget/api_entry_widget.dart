@@ -56,34 +56,68 @@ class CustomWidget extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Title: $title',
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      Row(
+                        children: [
+                          const Text(
+                            'Title: ',
+                            style: TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                          Text(
+                            title,
+                            style: const TextStyle(
+                              fontSize: 19,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                       const SizedBox(height: 8),
-                      Text(
-                        'Description: $description',
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        'Category: $category',
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      Row(
+                        children: [
+                          Row(
+                            children: [
+                              const Text(
+                                'Description: ',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                ),
+                              ),
+                              Text(
+                                description,
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                       const SizedBox(height: 8),
                       Row(
                         children: [
                           const Text(
-                            "HTTP Supported: ",
+                            'Category: ',
+                            style: TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                          Text(
+                            category,
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      Row(
+                        children: [
+                          const Text(
+                            "HTTP Supported:",
                             style: TextStyle(
                               fontSize: 14,
                             ),
@@ -104,7 +138,7 @@ class CustomWidget extends StatelessWidget {
                             Text(
                               '$link',
                               style: const TextStyle(
-                                fontSize: 14,
+                                fontSize: 16,
                                 decoration: TextDecoration.underline,
                                 color: Colors.blue,
                               ),
