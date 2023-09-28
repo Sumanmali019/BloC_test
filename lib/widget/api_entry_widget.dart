@@ -95,13 +95,21 @@ class CustomWidget extends StatelessWidget {
                         onTap: () {
                           _launchURL(link);
                         },
-                        child: Text(
-                          '$link',
-                          style: const TextStyle(
-                            fontSize: 14,
-                            decoration: TextDecoration.underline,
-                            color: Colors.blue,
-                          ),
+                        child: Row(
+                          children: [
+                            const Icon(Icons.link),
+                            const SizedBox(
+                              width: 4,
+                            ),
+                            Text(
+                              '$link',
+                              style: const TextStyle(
+                                fontSize: 14,
+                                decoration: TextDecoration.underline,
+                                color: Colors.blue,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       const SizedBox(height: 8),
